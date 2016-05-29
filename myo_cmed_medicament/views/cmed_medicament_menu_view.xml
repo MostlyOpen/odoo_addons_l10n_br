@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Pharmacy/Medicament/CMED Medicaments -->
+        <menuitem name="CMED Medicaments" id="menu_pharmacy_medicament_cmed_medicaments"
+            parent="myo_base.menu_pharmacy_medicament"
+            groups="myo_base.group_cmed_medicament_user"
+            sequence="50"
+            action="myo_cmed_medicament.myo_cmed_medicament_action" />
+            <!-- Pharmacy/Medicament/CMED Medicaments/Lists -->
+            <menuitem name="Lists" id="menu_pharmacy_medicament_cmed_medicaments_lists"
+                parent="myo_cmed_medicament.menu_pharmacy_medicament_cmed_medicaments"
+                groups="myo_base.group_cmed_medicament_user"
+                sequence="10"
+                action="myo_cmed_medicament.myo_cmed_medicament_list_action"/>
+            <!-- Pharmacy/Medicament/CMED Medicaments/List Items -->
+            <menuitem name="List Items" id="menu_pharmacy_medicament_cmed_medicaments_list_items"
+                parent="myo_cmed_medicament.menu_pharmacy_medicament_cmed_medicaments"
+                groups="myo_base.group_cmed_medicament_user"
+                sequence="20"
+                action="myo_cmed_medicament.myo_cmed_medicament_list_item_action"/>
+
+    </data>
+</openerp>
