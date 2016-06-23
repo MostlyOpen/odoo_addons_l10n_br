@@ -36,7 +36,7 @@
                             <page string="Other Information">
                                 <field name="notes" placeholder="Notes..." colspan="4"/>
                             </page>
-                            <page string="Settings" groups="myo_base.group_rmanager">
+                            <page name="settings" string="Settings" groups="myo_base.group_rmanager">
                                 <group>
                                     <field name="active"/>
                                 </group>

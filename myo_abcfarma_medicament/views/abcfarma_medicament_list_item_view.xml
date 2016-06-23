@@ -44,14 +44,14 @@
                                         <field name="presentation" readonly="True"/>
                                     </group>
                                     <group name="X">
-                                        <field name="active_component" readonly="True"/>
+                                        <field name="active_component_id" readonly="True"/>
                                         <field name="concentration" readonly="True"/>
-                                        <field name="pres_form" readonly="True"/>
+                                        <field name="pres_form_id" readonly="True"/>
                                         <field name="pres_quantity" readonly="True"/>
-                                        <field name="pres_quantity_unit" readonly="True"/>
+                                        <field name="pres_quantity_unit_id" readonly="True"/>
                                     </group>
                                     <group name="Y">
-                                        <field name="manufacturer" readonly="True"/>
+                                        <field name="manufacturer_id" readonly="True"/>
                                     </group>
                                 </group>
                             </page>
@@ -189,7 +189,7 @@
                         <field name="count_items"/>
                     </h3>
                 </label>
-                <page string="Settings" position="before">
+                <page name="settings" position="before">
                     <page string="ABCFarma List Itens">
                         <group>
                             <field name="abcfarma_list_item_ids" colspan="4" nolabel="1" />

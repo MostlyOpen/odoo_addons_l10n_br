@@ -38,21 +38,21 @@ class ABCFarmaMedicamentListItem(models.Model):
     medicament_name = fields.Char('Medicament Name', related='medicament_id.medicament_name')
     concentration = fields.Char('Concentration', related='medicament_id.concentration')
     presentation = fields.Char('Presentation', related='medicament_id.presentation')
-    pres_form = fields.Many2one('myo.medicament.form', string='Presentation Form',
-                                related='medicament_id.pres_form')
+    pres_form_id = fields.Many2one('myo.medicament.form', string='Presentation Form',
+                                   related='medicament_id.pres_form_id')
     pres_quantity = fields.Float('Presentation Quantity', related='medicament_id.pres_quantity')
-    pres_quantity_unit = fields.Many2one('myo.medicament.uom', string='Presentation Quantity Unit',
-                                         related='medicament_id.pres_quantity_unit')
+    pres_quantity_unit_id = fields.Many2one('myo.medicament.uom', string='Presentation Quantity Unit',
+                                            related='medicament_id.pres_quantity_unit_id')
     notes = fields.Text('Notes', related='medicament_id.notes')
     date_inclusion = fields.Datetime("Inclusion Date", related='medicament_id.date_inclusion')
     is_product = fields.Boolean('Is a Product', related='medicament_id.is_product')
     is_fraction = fields.Boolean('Is a Fraction', related='medicament_id.is_fraction')
     for_hospital_use = fields.Boolean('For Hospital Use', related='medicament_id.for_hospital_use')
 
-    active_component = fields.Many2one('myo.medicament.active_component', string='Active Component',
-                                       related='medicament_id.active_component')
-    manufacturer = fields.Many2one('myo.medicament.manufacturer', string='Manufacturer',
-                                   related='medicament_id.manufacturer')
+    active_component_id = fields.Many2one('myo.medicament.active_component', string='Active Component',
+                                          related='medicament_id.active_component_id')
+    manufacturer_id = fields.Many2one('myo.medicament.manufacturer', string='Manufacturer',
+                                      related='medicament_id.manufacturer_id')
 
     med_abc = fields.Char('MED_ABC', related='medicament_id.med_abc')
     med_ctr = fields.Char('MED_CTR', related='medicament_id.med_ctr')
