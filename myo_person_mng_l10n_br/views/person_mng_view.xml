@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="myo_person_mng_view_form_l10n_br" model="ir.ui.view">
+            <field name="name">myo.person.mng.form</field>
+            <field name="model">myo.person.mng</field>
+            <field name="inherit_id" ref="myo_person_mng.myo_person_mng_view_form"/>
+            <field name="arch" type="xml">
+                <field name="identification_id" position="replace">
+                    <field name="cpf"/>
+                </field>
+                <field name="otherid" position="replace">
+                    <field name="rg"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="myo_person_mng_view_tree_l10n_br" model="ir.ui.view">
+            <field name="name">myo.person.mng.tree</field>
+            <field name="model">myo.person.mng</field>
+            <field name="inherit_id" ref="myo_person_mng.myo_person_mng_view_tree"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="cpf"/>
+                    <field name="rg"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="myo_person_mng_view_search_l10n_br" model="ir.ui.view">
+            <field name="name">myo.person.mng.filter</field>
+            <field name="model">myo.person.mng</field>
+            <field name="inherit_id" ref="myo_person_mng.myo_person_mng_view_search"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="cpf"/>
+                    <field name="rg"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
