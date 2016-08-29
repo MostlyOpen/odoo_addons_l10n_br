@@ -13,6 +13,39 @@
                 <field name="otherid" position="replace">
                     <field name="rg"/>
                 </field>
+                <field name="zip" position="replace"/>
+                <field name="street" position="replace">
+                    <field name="zip" placeholder="CEP"/>
+                    <field name="street" placeholder="Street"/>
+                    <field name="number" placeholder="Number"/>
+                    <field name="district" placeholder="Disctrict"/>
+                </field>
+                <field name="street2" position="replace">
+                    <field name="street2" placeholder="Complement"/>
+                </field>
+                <field name="state_id" position="attributes">
+                    <attribute name="domain">[('country_id','=',country_id)]
+                    </attribute>
+                    <attribute name="style">width: 70%%</attribute>
+                </field>
+                <field name="state_id" position="after">
+                    <field name="l10n_br_city_id" placeholder="City"/>
+                </field>
+                <field name="city" position="replace">
+                    <field name="city" invisible="1"/>
+                </field>
+                <field name="country_id" position="replace"/>
+                <field name="state_id" position="before">
+                    <field name="country_id" placeholder="Country"/>
+                </field>
+                <field name="zip" position="attributes">
+                    <attribute name="style">width: 50%</attribute>
+                </field>
+                <field name="zip" position="after">
+                    <button name="zip_search" type="object" class="oe_inline, oe_edit_only">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </field>
             </field>
         </record>
 
