@@ -142,3 +142,23 @@ class Address_2(models.Model):
                 )
             else:
                 raise Warning(('Warning. No records found!'))
+
+
+class Address_3(models.Model):
+    _inherit = 'myo.address'
+
+    @api.depends('street', 'number', 'street2')
+    def _get_suggested_name(self):
+        if self.street:
+            self.suggested_name = self.street
+            if self.number:
+                self.suggested_name = self.suggested_name + ', ' + self.number
+                if self.street2:
+                    self.suggested_name = self.suggested_name + ' - ' + self.street2
+            else:
+                if self.street2:
+                    self.suggested_name = self.suggested_name + ' - ' + self.street2
+        else:
+            if not self.suggested_name:
+                if self.code:
+                    self.suggested_name = self.code
