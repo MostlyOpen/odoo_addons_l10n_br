@@ -64,6 +64,7 @@
                 </field>
                 <filter name="city" position="replace">
                     <filter name="city" string="City" context="{'group_by': 'l10n_br_city_id'}"/>
+                    <filter name="district" string="District" context="{'group_by': 'district'}"/>
                 </filter>
             </field>
         </record>
