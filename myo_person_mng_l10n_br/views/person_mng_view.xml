@@ -70,6 +70,9 @@
                     <field name="cpf"/>
                     <field name="rg"/>
                 </field>
+                <group name="group_by" position="inside">
+                    <filter string="District" context="{'group_by': 'district'}"/>
+                </group>
             </field>
         </record>
 
