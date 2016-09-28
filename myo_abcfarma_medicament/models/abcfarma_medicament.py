@@ -25,7 +25,7 @@ class ABCFarmaMedicament(models.Model):
     _name = 'myo.abcfarma.medicament'
     _inherit = 'myo.medicament.model'
 
-    name = fields.Char(string="Product Name", select=True, required=True, store=True,
+    name = fields.Char(string="Product Name", index=True, required=True, store=True,
                        compute="_get_compute_name",
                        help='Use "/" to get an automatic new Product Name.')
 
