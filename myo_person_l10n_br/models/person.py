@@ -49,6 +49,7 @@ class Person(models.Model):
 
     cpf = fields.Char('CPF', size=14)
     rg = fields.Char('RG', size=16)
+    address_district = fields.Char('Address Responsible', related='address_id.district', store=True)
 
     @api.one
     @api.constrains('cpf')

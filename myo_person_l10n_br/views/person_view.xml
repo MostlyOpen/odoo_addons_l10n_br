@@ -16,6 +16,17 @@
             </field>
         </record>
 
+        <record id="myo_person_view_form_address_l10n_br" model="ir.ui.view">
+            <field name="name">myo.person.form</field>
+            <field name="model">myo.person</field>
+            <field name="inherit_id" ref="myo_person.myo_person_view_form_address"/>
+            <field name="arch" type="xml">
+                <field name="address_category_ids" position="after">
+                    <field name="address_district" string="Address District"/>
+                </field>
+            </field>
+        </record>
+
         <record id="myo_person_view_tree_l10n_br" model="ir.ui.view">
             <field name="name">myo.person.tree</field>
             <field name="model">myo.person</field>
@@ -24,6 +35,7 @@
                 <field name="code" position="after">
                     <field name="cpf"/>
                     <field name="rg"/>
+                    <field name="address_district" string="Address District"/>
                 </field>
             </field>
         </record>
@@ -36,7 +48,11 @@
                 <field name="code" position="after">
                     <field name="cpf"/>
                     <field name="rg"/>
+                    <field name="address_district"/>
                 </field>
+                <group name="group_by" position="inside">
+                    <filter string="Address District" context="{'group_by': 'address_district'}"/>
+                </group>
             </field>
         </record>
 
